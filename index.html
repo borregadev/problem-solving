@@ -102,17 +102,20 @@
 
             <!-- Session Switcher Tabs -->
             <div class="flex items-center bg-slate-900/90 p-1.5 rounded-xl border border-white/10 gap-1.5 shadow-inner flex-wrap justify-center">
-                <button id="session-1-btn" onclick="switchSession('1')" class="px-4 py-2 rounded-lg text-sm sm:text-base font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-md glow-brand">
+                <button id="session-1-btn" onclick="switchSession('1')" class="px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-md glow-brand">
                     <i class="fa-solid fa-brain"></i> Session 1
                 </button>
-                <button id="session-2-btn" onclick="switchSession('2')" class="px-4 py-2 rounded-lg text-sm sm:text-base font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                <button id="session-2-btn" onclick="switchSession('2')" class="px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
                     <i class="fa-solid fa-sitemap"></i> Session 2
                 </button>
-                <button id="session-3-btn" onclick="switchSession('3')" class="px-4 py-2 rounded-lg text-sm sm:text-base font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                <button id="session-3-btn" onclick="switchSession('3')" class="px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
                     <i class="fa-solid fa-terminal"></i> Session 3
                 </button>
-                <button id="session-4-btn" onclick="switchSession('4')" class="px-4 py-2 rounded-lg text-sm sm:text-base font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                <button id="session-4-btn" onclick="switchSession('4')" class="px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
                     <i class="fa-solid fa-code-branch"></i> Session 4
+                </button>
+                <button id="session-5-btn" onclick="switchSession('5')" class="px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                    <i class="fa-solid fa-rotate"></i> Session 5
                 </button>
             </div>
         </div>
@@ -187,6 +190,26 @@
                 </button>
                 <button onclick="switchTab('s4-part-c')" id="btn-s4-part-c" class="s4-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
                     <i class="fa-solid fa-layer-group"></i> Part C: Nested Logic & SELECT/CASE
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub-Navigation Bar Session 5 -->
+    <nav id="session-5-nav" class="session-nav hidden bg-slate-950/80 border-b border-white/10 sticky top-[81px] z-40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex space-x-2 overflow-x-auto no-scrollbar py-3">
+                <button onclick="switchTab('s5-part-a')" id="btn-s5-part-a" class="s5-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-md glow-brand">
+                    <i class="fa-solid fa-rotate"></i> Part A: Pre-Test vs Post-Test
+                </button>
+                <button onclick="switchTab('s5-part-b')" id="btn-s5-part-b" class="s5-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                    <i class="fa-solid fa-calculator"></i> Part B: Count-Controlled (WHILE & FOR)
+                </button>
+                <button onclick="switchTab('s5-part-c')" id="btn-s5-part-c" class="s5-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                    <i class="fa-solid fa-truck-ramp-box"></i> Part C: Condition-Controlled & File IO
+                </button>
+                <button onclick="switchTab('s5-part-d')" id="btn-s5-part-d" class="s5-tab-btn px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50">
+                    <i class="fa-solid fa-key"></i> Part D: Post-Test DO...WHILE
                 </button>
             </div>
         </div>
@@ -852,6 +875,191 @@ END SELECT</pre>
             </section>
         </div>
 
+        <!-- ==================== SESSION 5 CONTENT CONTAINER ==================== -->
+        <div id="session-5-content" class="session-container hidden space-y-6">
+
+            <!-- S5 PART A: PRE-TEST VS POST-TEST -->
+            <section id="s5-part-a" class="tab-content space-y-6">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 shadow-xl">
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <span class="p-2.5 bg-brand-500/20 text-brand-400 rounded-xl"><i class="fa-solid fa-rotate"></i></span>
+                        Session 5 Part A: Loop Mechanisms (Pre-Test vs. Post-Test)
+                    </h2>
+                    <p class="text-slate-300 text-base">Iteration constructs repeat statement blocks until evaluated condition thresholds change.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl space-y-4 border border-cyanAccent-500/20">
+                        <h3 class="text-lg font-bold text-cyanAccent-400 flex items-center gap-2">
+                            <i class="fa-solid fa-filter"></i> Pre-Test Loops (WHILE / FOR)
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Condition is tested <strong>BEFORE</strong> executing the body. If the condition evaluates to false at start, the loop body runs <strong>0 times</strong>.
+                        </p>
+                        <div class="bg-slate-950 p-4 rounded-xl border border-white/10 text-xs font-mono text-emerald-400 space-y-1">
+                            <div><span class="text-brand-400 font-bold">WHILE</span> condition</div>
+                            <div class="pl-4 text-slate-300">// Executes only if condition is true</div>
+                            <div><span class="text-brand-400 font-bold">END WHILE</span></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-4 border border-pinkAccent-500/20">
+                        <h3 class="text-lg font-bold text-pinkAccent-400 flex items-center gap-2">
+                            <i class="fa-solid fa-redo"></i> Post-Test Loops (DO...WHILE)
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Statements run once <strong>BEFORE</strong> checking condition at the end. Guaranteed to run <strong>at least once (1+)</strong> regardless of initial condition state.
+                        </p>
+                        <div class="bg-slate-950 p-4 rounded-xl border border-white/10 text-xs font-mono text-emerald-400 space-y-1">
+                            <div><span class="text-brand-400 font-bold">DO</span></div>
+                            <div class="pl-4 text-slate-300">// Runs at least once</div>
+                            <div><span class="text-brand-400 font-bold">WHILE</span> condition;</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- S5 PART B: COUNT-CONTROLLED LOOPS -->
+            <section id="s5-part-b" class="tab-content hidden space-y-6">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 shadow-xl">
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <span class="p-2.5 bg-brand-500/20 text-brand-400 rounded-xl"><i class="fa-solid fa-calculator"></i></span>
+                        Session 5 Part B: Count-Controlled Loops
+                    </h2>
+                    <p class="text-slate-300 text-base">Utilized when iteration count is known in advance via counter initialization and step tracking.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl space-y-3 border border-brand-500/20">
+                        <h3 class="text-lg font-bold text-brand-400 flex items-center gap-2">
+                            <i class="fa-solid fa-hourglass-half"></i> 1. WHILE Count-Controlled
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Explicit counter declaration, initialisation, condition check, and manual incrementing within the loop body.</p>
+                        <pre class="bg-slate-950 p-4 rounded-xl border border-white/10 text-xs font-mono text-emerald-400">
+DECLARE Integer counter, limit;
+SET limit = 10;
+SET counter = 0;
+WHILE counter < limit
+    OUTPUT counter;
+    SET counter = counter + 1;
+END WHILE;</pre>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-3 border border-cyanAccent-500/20">
+                        <h3 class="text-lg font-bold text-cyanAccent-400 flex items-center gap-2">
+                            <i class="fa-solid fa-arrows-up-to-line"></i> 2. FOR Compact Loop
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Initialises counter, end limit, and step direction inside the loop header for cleaner code.</p>
+                        <pre class="bg-slate-950 p-4 rounded-xl border border-white/10 text-xs font-mono text-emerald-400">
+DECLARE Integer counter, CAPACITY;
+SET CAPACITY = 8;
+FOR counter = 1 TO CAPACITY STEP 1
+    OUTPUT "FETCH parcel";
+    OUTPUT "Parcel loaded count = " & counter;
+END FOR;
+OUTPUT "Dispatch Van";</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- S5 PART C: CONDITION-CONTROLLED & FILE IO -->
+            <section id="s5-part-c" class="tab-content hidden space-y-6">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 shadow-xl">
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <span class="p-2.5 bg-brand-500/20 text-brand-400 rounded-xl"><i class="fa-solid fa-truck-ramp-box"></i></span>
+                        Session 5 Part C: Condition-Controlled & File EOF Loops
+                    </h2>
+                    <p class="text-slate-300 text-base">Iterates while external logical state conditions remain True (e.g. payload thresholds or file stream limits).</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-emerald-500/20 shadow-xl space-y-4">
+                    <h3 class="text-lg font-bold text-emerald-400 flex items-center gap-2">
+                        <i class="fa-solid fa-boxes-packing"></i> Parcel Payload Loader Algorithm (<code class="text-cyanAccent-400 font-mono">WHILE NOT EOF()</code>)
+                    </h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Reads parcel weights from file stream until End-Of-File flag (<code class="text-pinkAccent-400 font-mono">EOF()</code>) or payload limit condition occurs.</p>
+                    <pre class="bg-slate-950 p-5 rounded-2xl border border-white/10 text-xs font-mono text-emerald-400 overflow-x-auto leading-relaxed">
+PROGRAM ParcelLoader
+    DECLARE Real payload, parcelWeight, CAPACITY;
+    DECLARE Integer parcelCount;
+
+    SET parcelCount = 0;
+    SET CAPACITY = 500.0;
+    SET payload = 0.0;
+    OPEN "parcels.txt" mode READ;
+
+    WHILE NOT EOF()
+        READ parcelWeight;
+        IF payload + parcelWeight <= CAPACITY THEN
+            SET parcelCount = parcelCount + 1;
+            OUTPUT "Parcel weighing " & parcelWeight & "kg loaded";
+            SET payload = payload + parcelWeight;
+        ELSE
+            OUTPUT parcelWeight & "kg parcel too heavy for van";
+        END IF;
+    END WHILE;
+
+    OUTPUT "Dispatch Van carrying " & parcelCount & " parcels.";
+    CLOSE;
+END</pre>
+                </div>
+            </section>
+
+            <!-- S5 PART D: POST-TEST DO...WHILE -->
+            <section id="s5-part-d" class="tab-content hidden space-y-6">
+                <div class="glass-card rounded-2xl p-6 border border-white/10 shadow-xl">
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <span class="p-2.5 bg-brand-500/20 text-brand-400 rounded-xl"><i class="fa-solid fa-key"></i></span>
+                        Session 5 Part D: Post-Test DO...WHILE Loop Example
+                    </h2>
+                    <p class="text-slate-300 text-base">Ensures prompt execution executes once before validating user access credentials.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl space-y-3 border border-pinkAccent-500/20">
+                        <h3 class="text-lg font-bold text-pinkAccent-400 flex items-center gap-2">
+                            <i class="fa-solid fa-lock"></i> PIN Verification Turnstile System
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Prompts user for PIN entry at least once, repeating prompt until correct PIN opens turnstile.</p>
+                        <pre class="bg-slate-950 p-4 rounded-xl border border-white/10 text-xs font-mono text-emerald-400">
+DECLARE String code, storedCode;
+DECLARE Boolean turnstileOpen;
+SET storedCode = "1234";
+SET turnstileOpen = false;
+
+DO
+    OUTPUT "Enter 4 digit PIN code:";
+    INPUT code;
+    IF code == storedCode THEN
+        SET turnstileOpen = true;
+    END IF;
+WHILE turnstileOpen == false;
+
+OUTPUT "PIN correct - Turnstile opened";</pre>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl space-y-4 border border-brand-500/20">
+                        <h3 class="text-lg font-bold text-brand-400 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-cyanAccent-400"></i> Summary of Loop Selection Rules
+                        </h3>
+                        <div class="space-y-3 text-xs">
+                            <div class="p-3 bg-slate-950 rounded-xl border border-white/5 space-y-1">
+                                <span class="text-amber-400 font-bold font-mono">Use FOR Loop:</span>
+                                <p class="text-slate-300 font-sans">When exact iteration count is known before loop execution.</p>
+                            </div>
+                            <div class="p-3 bg-slate-950 rounded-xl border border-white/5 space-y-1">
+                                <span class="text-cyanAccent-400 font-bold font-mono">Use WHILE Loop:</span>
+                                <p class="text-slate-300 font-sans">When iteration depends on variable state & zero executions are valid.</p>
+                            </div>
+                            <div class="p-3 bg-slate-950 rounded-xl border border-white/5 space-y-1">
+                                <span class="text-pinkAccent-400 font-bold font-mono">Use DO...WHILE Loop:</span>
+                                <p class="text-slate-300 font-sans">When input validation requires at least one initial execution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <!-- JavaScript Navigation & Tool Logic -->
@@ -867,12 +1075,12 @@ END SELECT</pre>
             if (targetContainer) targetContainer.classList.remove('hidden');
             if (targetNav) targetNav.classList.remove('hidden');
 
-            ['1', '2', '3', '4'].forEach(num => {
+            ['1', '2', '3', '4', '5'].forEach(num => {
                 const btn = document.getElementById(`session-${num}-btn`);
                 if (btn) {
                     btn.className = num === sessionNum
-                        ? 'px-4 py-2 rounded-lg text-sm sm:text-base font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-md glow-brand'
-                        : 'px-4 py-2 rounded-lg text-sm sm:text-base font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50';
+                        ? 'px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-md glow-brand'
+                        : 'px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-slate-800/50';
                 }
             });
 
@@ -880,6 +1088,7 @@ END SELECT</pre>
             if (sessionNum === '2') switchTab('s2-part-a');
             if (sessionNum === '3') switchTab('s3-part-a');
             if (sessionNum === '4') switchTab('s4-part-a');
+            if (sessionNum === '5') switchTab('s5-part-a');
         }
 
         // Sub-Tab Switcher
@@ -888,6 +1097,7 @@ END SELECT</pre>
             if (tabId.startsWith('s2')) activeSession = '2';
             if (tabId.startsWith('s3')) activeSession = '3';
             if (tabId.startsWith('s4')) activeSession = '4';
+            if (tabId.startsWith('s5')) activeSession = '5';
 
             const activeContainer = document.getElementById(`session-${activeSession}-content`);
             if (activeContainer) {
